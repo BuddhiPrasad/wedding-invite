@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Custom Wedding Palette & Decorative Styles */
+.font-script {
+  font-family: 'Playball', cursive, serif;
+}
+
+.font-cinzel {
+  font-family: 'Cinzel', serif;
+}
+
+/* Gold Gradient Text */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #B08968 0%, #D4AF37 50%, #8C6239 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-gold-gradient {
+  background: linear-gradient(135deg, #C5A880 0%, #B08968 50%, #9C6644 100%);
+}
+
+.border-gold-gradient {
+  border-image: linear-gradient(to right, #D4AF37, #B08968, #EFE7DA) 1;
+}
+
+/* Texture Pattern Background */
+.bg-wedding-texture {
+  background-color: #FAF7F2;
+  background-image: radial-gradient(#B08968 0.4px, transparent 0.4px), radial-gradient(#B08968 0.4px, #FAF7F2 0.4px);
+  background-size: 16px 16px;
+  background-position: 0 0, 8px 8px;
+  background-opacity: 0.05;
+}
+
+/* Glassmorphism Card Style */
+.glass-card {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(243, 238, 230, 0.8);
+  box-shadow: 0 10px 35px -5px rgba(176, 137, 104, 0.12);
+}
+
+/* Vertical Text */
+.vertical-text-left {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+
+.vertical-text-right {
+  writing-mode: vertical-rl;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF7F2;
+}
+::-webkit-scrollbar-thumb {
+  background: #D4C3B3;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #B08968;
+}
