@@ -8,7 +8,7 @@ import { VenuesSection } from './components/VenuesSection';
 import { TimelineSection } from './components/TimelineSection';
 import { GallerySection } from './components/GallerySection';
 import { CountdownSection } from './components/CountdownSection';
-import { RSVPSection } from './components/RSVPSection';
+// import { RSVPSection } from './components/RSVPSection';
 import { GuestbookSection } from './components/GuestbookSection';
 import { AmbientPetals } from './components/AmbientPetals';
 import { Footer } from './components/Footer';
@@ -42,7 +42,7 @@ export const App: React.FC = () => {
           <TimelineSection />
           <GallerySection />
           <CountdownSection />
-          <RSVPSection />
+          {/* <RSVPSection /> */}
           <GuestbookSection />
         </main>
 
