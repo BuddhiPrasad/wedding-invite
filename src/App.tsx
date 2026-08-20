@@ -18,7 +18,7 @@ export const App: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-[#FAF8F5] relative text-stone-800 selection:bg-[#B08968]/20 selection:text-[#7F5539]">
-      
+
       {/* Unwrap Envelope Overlay */}
       {!isUnwrapped && (
         <UnwrapEnvelope onUnwrap={() => setIsUnwrapped(true)} />
@@ -26,7 +26,7 @@ export const App: React.FC = () => {
 
       {/* Main Wedding Website Content (Revealed after unwrap) */}
       <div className={`transition-opacity duration-1000 ${isUnwrapped ? 'opacity-100' : 'opacity-0'}`}>
-        
+
         {/* Floating Audio Controller */}
         <MusicPlayer autoPlayTriggered={isUnwrapped} />
 

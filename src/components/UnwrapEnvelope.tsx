@@ -17,17 +17,16 @@ export const UnwrapEnvelope: React.FC<UnwrapEnvelopeProps> = ({ onUnwrap }) => {
   };
 
   return (
-    <div 
-      className={`fixed inset-0 z-50 flex flex-col items-center justify-center bg-[#ECE6DD] transition-all duration-1000 ease-in-out px-4 ${
-        isOpening ? 'opacity-0 scale-105 pointer-events-none' : 'opacity-100 scale-100'
-      }`}
+    <div
+      className={`fixed inset-0 z-50 flex flex-col items-center justify-center bg-[#ECE6DD] transition-all duration-1000 ease-in-out px-4 ${isOpening ? 'opacity-0 scale-105 pointer-events-none' : 'opacity-100 scale-100'
+        }`}
     >
       {/* Background Soft Glow */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#FAF7F2] via-[#EFE7DA] to-[#DFD5C6] opacity-90" />
 
       {/* Main Envelope Container */}
       <div className="relative w-full max-w-[480px] sm:max-w-[540px] aspect-[4/5] sm:aspect-[3/4] max-h-[85vh] bg-[#FAF8F5] rounded-lg shadow-envelope border border-[#E6DCCF] flex flex-col items-center justify-between p-6 sm:p-10 z-10 transition-transform duration-700 hover:shadow-card-glow">
-        
+
         {/* Decorative Outer Border Lines */}
         <div className="absolute inset-3 border border-[#D9CDBF]/50 rounded pointer-events-none" />
         <div className="absolute inset-4 border border-[#C5B8A5]/30 rounded pointer-events-none" />
@@ -58,14 +57,21 @@ export const UnwrapEnvelope: React.FC<UnwrapEnvelopeProps> = ({ onUnwrap }) => {
         </div>
 
         {/* Ribbon & Silk Bow Wrap */}
-        <div className="absolute inset-x-0 top-[48%] -translate-y-1/2 flex items-center justify-center pointer-events-none z-20">
+        <div className="absolute inset-x-0 top-[48%] -translate-y-1/2 flex items-center justify-center z-20">
           {/* Horizontal Ribbon */}
-          <div className="w-full h-10 bg-gradient-to-r from-[#FAF3EA]/90 via-[#F1E4D3]/90 to-[#FAF3EA]/90 shadow-sm border-y border-[#E3D4C1] opacity-90" />
-          
-          {/* Silk Bow Icon / Graphic */}
-          <div className="absolute bg-[#FAF3EA] border-2 border-[#D4AF37]/40 rounded-full p-2 shadow-md flex items-center justify-center">
-            <Heart className="w-5 h-5 text-[#B08968] fill-[#B08968]/20 animate-pulse" />
-          </div>
+          <div className="w-full h-10 bg-gradient-to-r from-[#FAF3EA]/90 via-[#F1E4D3]/90 to-[#FAF3EA]/90 shadow-sm border-y border-[#E3D4C1] opacity-90 pointer-events-none" />
+
+          {/* Clickable Silk Bow / Heart */}
+          <button
+            onClick={handleClick}
+            disabled={isOpening}
+            aria-label="Unwrap invitation"
+            className="absolute bg-[#FAF3EA] border-2 border-[#D4AF37]/40 rounded-full p-2 shadow-md flex items-center justify-center cursor-pointer transition-transform duration-300 hover:scale-125 active:scale-95 focus:outline-none group"
+          >
+            {/* Pulse ring hint */}
+            <span className="absolute inset-0 rounded-full animate-ping bg-[#D4AF37]/20 group-hover:bg-[#D4AF37]/30" />
+            <Heart className="relative w-5 h-5 text-[#B08968] fill-[#B08968]/40 animate-pulse" />
+          </button>
         </div>
 
         {/* Invitation Text Details */}
