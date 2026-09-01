@@ -35,6 +35,7 @@ export interface WeddingData {
     bridePhone: string;
     bridePhoneFormatted: string;
   };
+  heroImage: string;
   timeline: TimelineEvent[];
   galleryImages: {
     url: string;
@@ -72,6 +73,7 @@ export const weddingData: WeddingData = {
     bridePhone: "+94766720606",
     bridePhoneFormatted: "076 672 0606"
   },
+  heroImage: "/images/IMG_1858.JPG.jpeg",
   timeline: [
     {
       time: "07:30 AM",

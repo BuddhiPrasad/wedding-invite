@@ -16,7 +16,7 @@ export const HeroSaveTheDate: React.FC = () => {
       {/* Background Image Container with Soft Overlay */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/images/hero_couple.png"
+          src={weddingData.heroImage || "/images/IMG_1858.JPG.jpeg"}
           alt="Save The Date"
           className="w-full h-full object-cover object-center filter brightness-[0.97] opacity-90 scale-100 transition-transform duration-1000"
         />
