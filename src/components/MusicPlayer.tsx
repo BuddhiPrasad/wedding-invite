@@ -9,8 +9,8 @@ export const MusicPlayer: React.FC<MusicPlayerProps> = ({ autoPlayTriggered }) =
   const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
-  // Default copyright-free romantic ambient acoustic track URL
-  const audioUrl = "https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf07a.mp3?filename=wedding-background-music-114258.mp3";
+  // Romantic piano cover of "A Thousand Years"
+  const audioUrl = encodeURI("/audio/A Thousand Years – Piano Cover  Christina Perri (Sheet Music) - John Rod Dondoyano.mp3.mpeg");
 
   useEffect(() => {
     if (autoPlayTriggered && audioRef.current && !isPlaying) {
@@ -41,20 +41,20 @@ export const MusicPlayer: React.FC<MusicPlayerProps> = ({ autoPlayTriggered }) =
       <button
         onClick={togglePlay}
         aria-label="Toggle background music"
-        className="fixed top-6 right-6 z-40 p-3 rounded-full bg-white/80 backdrop-blur-md shadow-card border border-[#E3D4C1] text-[#8C6239] hover:text-[#2D2D2D] hover:bg-white hover:scale-110 transition-all duration-300 group cursor-pointer"
+        className="fixed top-6 right-6 z-40 p-3 rounded-full bg-[#FFFFF0]/90 backdrop-blur-md shadow-card border border-[#C5A059]/40 text-[#938D89] hover:text-[#292524] hover:bg-[#FFFFF0] hover:scale-110 transition-all duration-300 group cursor-pointer"
       >
         <div className="relative flex items-center justify-center">
           {isPlaying ? (
-            <Volume2 className="w-5 h-5 text-[#B08968] animate-pulse" />
+            <Volume2 className="w-5 h-5 text-[#C5A059] animate-pulse" />
           ) : (
-            <VolumeX className="w-5 h-5 text-[#A67C52]/70" />
+            <VolumeX className="w-5 h-5 text-[#938D89]" />
           )}
 
           {/* Animated soundwave indicators */}
           {isPlaying && (
             <span className="absolute -top-1 -right-1 flex h-2.5 w-2.5">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#D4AF37] opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#B08968]"></span>
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#C5A059] opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#C5A059]"></span>
             </span>
           )}
         </div>

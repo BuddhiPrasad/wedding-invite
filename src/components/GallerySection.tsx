@@ -6,20 +6,20 @@ export const GallerySection: React.FC = () => {
   const [activeImage, setActiveImage] = useState<string | null>(null);
 
   return (
-    <section className="py-24 px-4 bg-[#FAF7F2] relative overflow-hidden">
+    <section className="py-24 px-4 bg-[#FFFFF0] relative overflow-hidden">
       <div className="max-w-6xl mx-auto space-y-16">
         
         {/* Header */}
         <div className="text-center space-y-3">
           <div className="flex items-center justify-center gap-3">
-            <span className="w-12 h-[1px] bg-[#B08968]/30" />
-            <p className="font-cinzel text-xs tracking-[0.3em] text-[#A67C52] uppercase">
+            <span className="w-12 h-[1px] bg-[#C5A059]/30" />
+            <p className="font-cinzel text-xs tracking-[0.3em] text-[#938D89] uppercase">
               A LIFETIME OF
             </p>
-            <span className="w-12 h-[1px] bg-[#B08968]/30" />
+            <span className="w-12 h-[1px] bg-[#C5A059]/30" />
           </div>
-          <h2 className="font-script text-5xl sm:text-7xl text-[#2D2D2D]">
-            Our <span className="text-[#B08968]">Gallery</span>
+          <h2 className="font-script text-5xl sm:text-7xl text-[#292524]">
+            Our <span className="text-[#C5A059]">Gallery</span>
           </h2>
         </div>
 
@@ -29,7 +29,7 @@ export const GallerySection: React.FC = () => {
             <div
               key={index}
               onClick={() => setActiveImage(img.url)}
-              className="group relative aspect-[3/4] rounded-3xl overflow-hidden bg-white border border-[#E6DCCF] shadow-sm hover:shadow-card cursor-pointer transition-all duration-500 hover:-translate-y-1.5"
+              className="group relative aspect-[3/4] rounded-3xl overflow-hidden bg-white border border-[#938D89]/30 shadow-sm hover:shadow-card cursor-pointer transition-all duration-500 hover:-translate-y-1.5"
             >
               <img
                 src={img.url}
@@ -38,10 +38,10 @@ export const GallerySection: React.FC = () => {
               />
 
               {/* Gradient Overlay & Hover Caption */}
-              <div className="absolute inset-0 bg-gradient-to-t from-[#2D2D2D]/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 text-white">
+              <div className="absolute inset-0 bg-gradient-to-t from-[#292524]/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 text-white">
                 <div className="flex items-center justify-between">
                   <p className="font-script text-2xl drop-shadow-md">{img.caption}</p>
-                  <ZoomIn className="w-5 h-5 text-[#FAF7F2]" />
+                  <ZoomIn className="w-5 h-5 text-[#FFFFF0]" />
                 </div>
               </div>
             </div>

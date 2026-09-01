@@ -34,7 +34,7 @@ export const AmbientPetals: React.FC = () => {
 
     const particleCount = 28;
     const particles: Particle[] = [];
-    const colors = ['#D4AF37', '#B08968', '#C5A880', '#E3D4C1'];
+    const colors = ['#C5A059', '#D9BA78', '#938D89', '#FFFFF0'];
 
     for (let i = 0; i < particleCount; i++) {
       particles.push({

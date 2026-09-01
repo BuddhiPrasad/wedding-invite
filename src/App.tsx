@@ -17,7 +17,7 @@ export const App: React.FC = () => {
   const [isUnwrapped, setIsUnwrapped] = useState(false);
 
   return (
-    <div className="min-h-screen bg-[#FAF8F5] relative text-stone-800 selection:bg-[#B08968]/20 selection:text-[#7F5539]">
+    <div className="min-h-screen bg-[#FFFFF0] relative text-[#292524] selection:bg-[#C5A059]/20 selection:text-[#292524]">
 
       {/* Unwrap Envelope Overlay */}
       {!isUnwrapped && (

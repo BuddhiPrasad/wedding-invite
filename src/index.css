@@ -19,23 +19,23 @@
 
 /* Gold Gradient Text */
 .text-gold-gradient {
-  background: linear-gradient(135deg, #B08968 0%, #D4AF37 50%, #8C6239 100%);
+  background: linear-gradient(135deg, #C5A059 0%, #E2C582 50%, #A6843E 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .bg-gold-gradient {
-  background: linear-gradient(135deg, #C5A880 0%, #B08968 50%, #9C6644 100%);
+  background: linear-gradient(135deg, #C5A059 0%, #D9BA78 50%, #A6843E 100%);
 }
 
 .border-gold-gradient {
-  border-image: linear-gradient(to right, #D4AF37, #B08968, #EFE7DA) 1;
+  border-image: linear-gradient(to right, #C5A059, #938D89, #FFFFF0) 1;
 }
 
 /* Texture Pattern Background */
 .bg-wedding-texture {
-  background-color: #FAF7F2;
-  background-image: radial-gradient(#B08968 0.4px, transparent 0.4px), radial-gradient(#B08968 0.4px, #FAF7F2 0.4px);
+  background-color: #FFFFF0;
+  background-image: radial-gradient(#C5A059 0.4px, transparent 0.4px), radial-gradient(#C5A059 0.4px, #FFFFF0 0.4px);
   background-size: 16px 16px;
   background-position: 0 0, 8px 8px;
   background-opacity: 0.05;
@@ -43,11 +43,11 @@
 
 /* Glassmorphism Card Style */
 .glass-card {
-  background: rgba(255, 255, 255, 0.75);
+  background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(243, 238, 230, 0.8);
-  box-shadow: 0 10px 35px -5px rgba(176, 137, 104, 0.12);
+  border: 1px solid rgba(197, 160, 89, 0.25);
+  box-shadow: 0 10px 35px -5px rgba(41, 37, 36, 0.08);
 }
 
 /* Vertical Text */
@@ -65,12 +65,12 @@
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #FAF7F2;
+  background: #FFFFF0;
 }
 ::-webkit-scrollbar-thumb {
-  background: #D4C3B3;
+  background: #938D89;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #B08968;
+  background: #C5A059;
 }

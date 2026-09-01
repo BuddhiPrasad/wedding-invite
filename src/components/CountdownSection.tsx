@@ -39,17 +39,17 @@ export const CountdownSection: React.FC = () => {
   };
 
   return (
-    <section className="py-24 px-4 bg-[#F5EFE6] relative overflow-hidden">
+    <section className="py-24 px-4 bg-white relative overflow-hidden">
       <div className="max-w-4xl mx-auto space-y-12 text-center">
         
         {/* Header Label */}
         <div className="space-y-3">
           <div className="flex items-center justify-center gap-3">
-            <span className="w-12 h-[1px] bg-[#B08968]/30" />
-            <p className="font-cinzel text-xs tracking-[0.3em] text-[#A67C52] uppercase">
+            <span className="w-12 h-[1px] bg-[#C5A059]/30" />
+            <p className="font-cinzel text-xs tracking-[0.3em] text-[#938D89] uppercase">
               THE WAIT IS ALMOST OVER
             </p>
-            <span className="w-12 h-[1px] bg-[#B08968]/30" />
+            <span className="w-12 h-[1px] bg-[#C5A059]/30" />
           </div>
         </div>
 
@@ -57,41 +57,41 @@ export const CountdownSection: React.FC = () => {
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 max-w-2xl mx-auto">
           
           {/* Days Card */}
-          <div className="flex flex-col items-center justify-center py-6 px-4 rounded-t-[60px] rounded-b-[24px] bg-[#FAF8F5] border border-[#E3D4C1] shadow-card hover:scale-105 transition-transform duration-300">
-            <span className="font-script text-5xl sm:text-6xl text-[#B08968]">
+          <div className="flex flex-col items-center justify-center py-6 px-4 rounded-t-[60px] rounded-b-[24px] bg-[#FFFFF0] border border-[#C5A059]/30 shadow-card hover:scale-105 transition-transform duration-300">
+            <span className="font-script text-5xl sm:text-6xl text-[#C5A059]">
               {formatNumber(timeLeft.days)}
             </span>
-            <span className="font-cinzel text-[10px] sm:text-xs tracking-[0.25em] text-[#7F5539] uppercase mt-2">
+            <span className="font-cinzel text-[10px] sm:text-xs tracking-[0.25em] text-[#292524] uppercase mt-2 font-medium">
               DAYS
             </span>
           </div>
 
           {/* Hours Card */}
-          <div className="flex flex-col items-center justify-center py-6 px-4 rounded-t-[60px] rounded-b-[24px] bg-[#FAF8F5] border border-[#E3D4C1] shadow-card hover:scale-105 transition-transform duration-300">
-            <span className="font-script text-5xl sm:text-6xl text-[#B08968]">
+          <div className="flex flex-col items-center justify-center py-6 px-4 rounded-t-[60px] rounded-b-[24px] bg-[#FFFFF0] border border-[#C5A059]/30 shadow-card hover:scale-105 transition-transform duration-300">
+            <span className="font-script text-5xl sm:text-6xl text-[#C5A059]">
               {formatNumber(timeLeft.hours)}
             </span>
-            <span className="font-cinzel text-[10px] sm:text-xs tracking-[0.25em] text-[#7F5539] uppercase mt-2">
+            <span className="font-cinzel text-[10px] sm:text-xs tracking-[0.25em] text-[#292524] uppercase mt-2 font-medium">
               HOURS
             </span>
           </div>
 
           {/* Minutes Card */}
-          <div className="flex flex-col items-center justify-center py-6 px-4 rounded-t-[60px] rounded-b-[24px] bg-[#FAF8F5] border border-[#E3D4C1] shadow-card hover:scale-105 transition-transform duration-300">
-            <span className="font-script text-5xl sm:text-6xl text-[#B08968]">
+          <div className="flex flex-col items-center justify-center py-6 px-4 rounded-t-[60px] rounded-b-[24px] bg-[#FFFFF0] border border-[#C5A059]/30 shadow-card hover:scale-105 transition-transform duration-300">
+            <span className="font-script text-5xl sm:text-6xl text-[#C5A059]">
               {formatNumber(timeLeft.minutes)}
             </span>
-            <span className="font-cinzel text-[10px] sm:text-xs tracking-[0.25em] text-[#7F5539] uppercase mt-2">
+            <span className="font-cinzel text-[10px] sm:text-xs tracking-[0.25em] text-[#292524] uppercase mt-2 font-medium">
               MINUTES
             </span>
           </div>
 
           {/* Seconds Card */}
-          <div className="flex flex-col items-center justify-center py-6 px-4 rounded-t-[60px] rounded-b-[24px] bg-[#FAF8F5] border border-[#E3D4C1] shadow-card hover:scale-105 transition-transform duration-300">
-            <span className="font-script text-5xl sm:text-6xl text-[#B08968]">
+          <div className="flex flex-col items-center justify-center py-6 px-4 rounded-t-[60px] rounded-b-[24px] bg-[#FFFFF0] border border-[#C5A059]/30 shadow-card hover:scale-105 transition-transform duration-300">
+            <span className="font-script text-5xl sm:text-6xl text-[#C5A059]">
               {formatNumber(timeLeft.seconds)}
             </span>
-            <span className="font-cinzel text-[10px] sm:text-xs tracking-[0.25em] text-[#7F5539] uppercase mt-2">
+            <span className="font-cinzel text-[10px] sm:text-xs tracking-[0.25em] text-[#292524] uppercase mt-2 font-medium">
               SECONDS
             </span>
           </div>

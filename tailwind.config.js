@@ -7,17 +7,36 @@ export default {
   theme: {
     extend: {
       colors: {
+        'brand-gold': {
+          DEFAULT: '#C5A059',
+          light: '#D9BA78',
+          dark: '#A6843E',
+        },
+        'brand-charcoal': {
+          DEFAULT: '#292524',
+          light: '#3F3B38',
+          dark: '#1C1917',
+        },
+        'brand-taupe': {
+          DEFAULT: '#938D89',
+          light: '#B5AFA9',
+          dark: '#716C68',
+        },
+        'brand-ivory': {
+          DEFAULT: '#FFFFF0',
+          dark: '#F5F5E3',
+        },
         'brand-beige': {
-          DEFAULT: '#F9F6F0',
-          light: '#FDFBF7',
-          dark: '#EFE7DA',
-          deep: '#A67C52',
-          gold: '#C5A880',
+          DEFAULT: '#FFFFF0',
+          light: '#FFFFFF',
+          dark: '#F5F5E3',
+          deep: '#938D89',
+          gold: '#C5A059',
         },
         'brand-champagne': {
-          DEFAULT: '#D4AF37',
-          light: '#E6CA65',
-          dark: '#B08968',
+          DEFAULT: '#C5A059',
+          light: '#D9BA78',
+          dark: '#A6843E',
         }
       },
       fontFamily: {
@@ -26,9 +45,9 @@ export default {
         sans: ['"Montserrat"', 'sans-serif'],
       },
       boxShadow: {
-        'card': '0 8px 30px rgba(176,137,104,0.15)',
-        'card-glow': '0 12px 40px rgba(176,137,104,0.22)',
-        'envelope': '0 20px 50px rgba(0,0,0,0.12)',
+        'card': '0 8px 30px rgba(41,37,36,0.06)',
+        'card-glow': '0 12px 40px rgba(197,160,89,0.22)',
+        'envelope': '0 20px 50px rgba(41,37,36,0.12)',
       },
       keyframes: {
         float: {
