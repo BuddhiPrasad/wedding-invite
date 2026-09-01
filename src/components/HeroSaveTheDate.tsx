@@ -16,9 +16,9 @@ export const HeroSaveTheDate: React.FC = () => {
       {/* Background Image Container with Soft Overlay */}
       <div className="absolute inset-0 z-0">
         <img
-          src={weddingData.heroImage || "/images/IMG_1858.JPG.jpeg"}
+          src={weddingData.heroImage || "/images/hero_couple_new.png"}
           alt="Save The Date"
-          className="w-full h-full object-cover object-center filter brightness-[0.97] opacity-90 scale-100 transition-transform duration-1000"
+          className="w-full h-full object-cover object-[68%_25%] md:object-center filter brightness-[0.97] opacity-90 scale-[0.92] md:scale-[0.94] transition-transform duration-1000"
         />
         {/* Soft Ivory Vignette Overlays */}
         <div className="absolute inset-0 bg-gradient-to-t from-[#FFFFF0] via-[#FFFFF0]/40 to-[#FFFFF0]/60" />
@@ -44,8 +44,16 @@ export const HeroSaveTheDate: React.FC = () => {
           <span className="font-cinzel text-[10px] sm:text-xs tracking-[0.25em] uppercase text-[#292524]">Save The Date</span>
         </div>
 
-        <h1 className="font-script text-6xl sm:text-8xl lg:text-9xl text-[#292524] leading-tight font-normal drop-shadow-sm">
-          {weddingData.brideName} <span className="text-[#C5A059] font-script">&</span> {weddingData.groomName}
+        <h1 className="font-script text-[#292524] font-normal drop-shadow-sm flex flex-col items-center justify-center gap-1 sm:gap-2">
+          <span className="text-5xl sm:text-7xl lg:text-8xl leading-none">
+            {weddingData.brideName}
+          </span>
+          <span className="text-3xl sm:text-5xl lg:text-6xl text-[#C5A059] leading-tight font-script">
+            &
+          </span>
+          <span className="text-5xl sm:text-7xl lg:text-8xl leading-none">
+            {weddingData.groomName}
+          </span>
         </h1>
 
         <p className="font-cinzel text-sm sm:text-base lg:text-lg tracking-[0.2em] text-[#292524] uppercase font-medium">

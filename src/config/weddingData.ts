@@ -75,7 +75,7 @@ export const weddingData: WeddingData = {
     bridePhone: "+94766720606",
     bridePhoneFormatted: "076 672 0606"
   },
-  heroImage: "/images/IMG_1858.JPG.jpeg",
+  heroImage: "/images/hero_couple_new.png",
   protagonistsImage: "/images/IMG_1860.JPG.jpeg",
   sacredUnionImage: "/images/IMG_1863.JPG.jpeg",
   timeline: [
