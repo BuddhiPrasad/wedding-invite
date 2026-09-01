@@ -18,7 +18,7 @@ export const HeroSaveTheDate: React.FC = () => {
         <img
           src={weddingData.heroImage || "/images/hero_couple_new.png"}
           alt="Save The Date"
-          className="w-full h-full object-cover object-[68%_25%] md:object-center filter brightness-[0.97] opacity-90 scale-[0.92] md:scale-[0.94] transition-transform duration-1000"
+          className="w-full h-full object-cover object-[68%_30%] md:object-center filter brightness-[0.97] opacity-90 scale-100 transition-transform duration-1000"
         />
         {/* Soft Ivory Vignette Overlays */}
         <div className="absolute inset-0 bg-gradient-to-t from-[#FFFFF0] via-[#FFFFF0]/40 to-[#FFFFF0]/60" />
