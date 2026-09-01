@@ -87,7 +87,7 @@ export const SacredUnionSection: React.FC = () => {
             <div className="relative w-full max-w-[440px] aspect-[4/5] rounded-[36px] overflow-hidden bg-[#FFFFF0] p-3 border border-[#938D89]/30 shadow-card">
               <div className="w-full h-full rounded-[28px] overflow-hidden">
                 <img
-                  src="/images/sacred_union.png"
+                  src={weddingData.sacredUnionImage}
                   alt="Sacred Union"
                   className="w-full h-full object-cover object-center filter hover:scale-105 transition-transform duration-700"
                 />

@@ -55,7 +55,7 @@ export const ProtagonistsSection: React.FC = () => {
             <div className="relative w-full max-w-[340px] sm:max-w-[380px] aspect-[4/5] rounded-t-[180px] rounded-b-[24px] overflow-hidden p-2 bg-white border border-[#938D89]/30 shadow-card">
               <div className="w-full h-full rounded-t-[172px] rounded-b-[20px] overflow-hidden">
                 <img
-                  src="/images/protagonists.png"
+                  src={weddingData.protagonistsImage}
                   alt={`${weddingData.brideName} and ${weddingData.groomName}`}
                   className="w-full h-full object-cover object-center filter hover:scale-105 transition-transform duration-700"
                 />

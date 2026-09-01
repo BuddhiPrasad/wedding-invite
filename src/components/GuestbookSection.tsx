@@ -20,7 +20,7 @@ export const GuestbookSection: React.FC = () => {
     {
       id: '2',
       name: 'Nimali & Kasun',
-      message: 'May your union be blessed with abundant happiness and divine peace. Congratulations Prasad & Buddhi!',
+      message: 'May your union be blessed with abundant happiness and divine peace. Congratulations Kavindu & Priyangika!',
       date: 'July 2026'
     }
   ]);

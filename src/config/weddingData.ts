@@ -36,6 +36,8 @@ export interface WeddingData {
     bridePhoneFormatted: string;
   };
   heroImage: string;
+  protagonistsImage: string;
+  sacredUnionImage: string;
   timeline: TimelineEvent[];
   galleryImages: {
     url: string;
@@ -44,10 +46,10 @@ export interface WeddingData {
 }
 
 export const weddingData: WeddingData = {
-  brideName: "Buddhi",
-  groomName: "Prasad",
-  brideFullName: "Buddhi",
-  groomFullName: "Prasad",
+  brideName: "Priyangika",
+  groomName: "Kavindu",
+  brideFullName: "Priyangika",
+  groomFullName: "Kavindu",
   brideParents: "Daughter of Loving Parents",
   groomParents: "Son of Loving Parents",
   weddingDate: "2029-07-16T08:00:00",
@@ -74,6 +76,8 @@ export const weddingData: WeddingData = {
     bridePhoneFormatted: "076 672 0606"
   },
   heroImage: "/images/IMG_1858.JPG.jpeg",
+  protagonistsImage: "/images/IMG_1860.JPG.jpeg",
+  sacredUnionImage: "/images/IMG_1863.JPG.jpeg",
   timeline: [
     {
       time: "07:30 AM",
@@ -108,15 +112,15 @@ export const weddingData: WeddingData = {
   ],
   galleryImages: [
     {
-      url: "/images/hero_couple.png",
+      url: "/images/IMG_1858.JPG.jpeg",
       caption: "Eternal Moments"
     },
     {
-      url: "/images/protagonists.png",
+      url: "/images/IMG_1860.JPG.jpeg",
       caption: "The Journey Begins"
     },
     {
-      url: "/images/sacred_union.png",
+      url: "/images/IMG_1863.JPG.jpeg",
       caption: "Love & Grace"
     },
     {
