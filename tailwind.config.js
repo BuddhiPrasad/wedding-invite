@@ -40,8 +40,10 @@ export default {
         }
       },
       fontFamily: {
-        serif: ['"Playball"', 'cursive', 'serif'],
-        cinzel: ['"Cinzel"', 'serif'],
+        script: ['"Alex Brush"', 'cursive'],
+        serif: ['"Giomori"', 'serif'],
+        cinzel: ['"Giomori"', 'serif'],
+        giomori: ['"Giomori"', 'serif'],
         sans: ['"Montserrat"', 'sans-serif'],
       },
       boxShadow: {

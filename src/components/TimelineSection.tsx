@@ -19,7 +19,7 @@ export const TimelineSection: React.FC = () => {
   };
 
   return (
-    <section className="py-24 px-4 bg-white relative overflow-hidden">
+    <section className="py-24 px-4 bg-[#FFFFF0] relative overflow-hidden">
       <div className="max-w-4xl mx-auto space-y-16">
         
         {/* Header */}
@@ -37,10 +37,10 @@ export const TimelineSection: React.FC = () => {
         </div>
 
         {/* Timeline Container */}
-        <div className="relative py-8">
+        <div className="relative max-w-3xl mx-auto py-6">
           
-          {/* Vertical Connecting Line */}
-          <div className="absolute left-1/2 top-0 bottom-0 w-[1px] bg-[#938D89]/30 -translate-x-1/2 hidden md:block" />
+          {/* Vertical Connecting Line (Centered on desktop, left on mobile) */}
+          <div className="absolute left-6 md:left-1/2 top-4 bottom-4 w-[1px] bg-[#C5A059]/30 -translate-x-1/2" />
 
           <div className="space-y-12 md:space-y-16 relative">
             {weddingData.timeline.map((event, index) => {
@@ -49,35 +49,66 @@ export const TimelineSection: React.FC = () => {
               return (
                 <div 
                   key={index}
-                  className={`flex flex-col md:flex-row items-center gap-6 md:gap-0 ${
-                    isEven ? 'md:flex-row-reverse' : ''
-                  }`}
+                  className="relative flex flex-col md:flex-row items-start md:items-center pl-14 md:pl-0"
                 >
                   
-                  {/* Event Text Side */}
-                  <div className={`w-full md:w-1/2 text-center ${
-                    isEven ? 'md:text-left md:pl-12' : 'md:text-right md:pr-12'
-                  }`}>
-                    <div className="inline-block p-6 rounded-2xl bg-[#FFFFF0] border border-[#938D89]/30 shadow-sm hover:shadow-card transition-shadow duration-300 max-w-md w-full">
-                      <p className="font-cinzel text-xs tracking-[0.2em] text-[#C5A059] uppercase font-semibold mb-1">
+                  {/* Left Column (Desktop) */}
+                  <div className="hidden md:flex w-1/2 justify-end pr-10">
+                    {isEven ? (
+                      /* Even Row: Time on Left */
+                      <p className="font-serif italic text-lg lg:text-xl text-[#C5A059] tracking-wider text-right">
                         {event.time}
                       </p>
-                      <h3 className="font-script text-3xl text-[#292524] mb-1">
-                        {event.title}
-                      </h3>
-                      <p className="font-serif italic text-sm text-[#938D89]">
-                        {event.description}
-                      </p>
-                    </div>
+                    ) : (
+                      /* Odd Row: Title & Description on Left */
+                      <div className="text-right space-y-1 max-w-xs">
+                        <h3 className="font-script text-2xl lg:text-3xl text-[#292524]">
+                          {event.title}
+                        </h3>
+                        <p className="font-serif italic text-xs lg:text-sm text-[#938D89] leading-relaxed">
+                          {event.description}
+                        </p>
+                      </div>
+                    )}
                   </div>
 
                   {/* Center Node Icon */}
-                  <div className="relative z-10 flex items-center justify-center w-12 h-12 rounded-full bg-[#FFFFF0] border-2 border-[#C5A059] shadow-sm shrink-0 my-2 md:my-0">
+                  <div className="absolute left-6 md:left-1/2 -translate-x-1/2 z-10 flex items-center justify-center w-10 h-10 lg:w-11 lg:h-11 rounded-full bg-white border border-[#C5A059]/40 shadow-sm shrink-0">
                     {getIcon(event.icon)}
                   </div>
 
-                  {/* Empty Spacer Side for Desktop layout symmetry */}
-                  <div className="hidden md:block w-1/2" />
+                  {/* Right Column (Desktop) */}
+                  <div className="hidden md:flex w-1/2 justify-start pl-10">
+                    {isEven ? (
+                      /* Even Row: Title & Description on Right */
+                      <div className="text-left space-y-1 max-w-xs">
+                        <h3 className="font-script text-2xl lg:text-3xl text-[#292524]">
+                          {event.title}
+                        </h3>
+                        <p className="font-serif italic text-xs lg:text-sm text-[#938D89] leading-relaxed">
+                          {event.description}
+                        </p>
+                      </div>
+                    ) : (
+                      /* Odd Row: Time on Right */
+                      <p className="font-serif italic text-lg lg:text-xl text-[#C5A059] tracking-wider text-left">
+                        {event.time}
+                      </p>
+                    )}
+                  </div>
+
+                  {/* Mobile View (Stacked layout with clean typography) */}
+                  <div className="md:hidden text-left space-y-1">
+                    <p className="font-serif italic text-sm text-[#C5A059] tracking-wider font-medium">
+                      {event.time}
+                    </p>
+                    <h3 className="font-script text-2xl text-[#292524]">
+                      {event.title}
+                    </h3>
+                    <p className="font-serif italic text-xs text-[#938D89] leading-relaxed">
+                      {event.description}
+                    </p>
+                  </div>
 
                 </div>
               );

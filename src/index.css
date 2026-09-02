@@ -8,13 +8,37 @@
   }
 }
 
+@font-face {
+  font-family: 'Giomori';
+  src: url('/fonts/giomori/Giomori.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Giomori';
+  src: url('/fonts/giomori/Giomori Italic.otf') format('opentype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
 /* Custom Wedding Palette & Decorative Styles */
 .font-script {
-  font-family: 'Playball', cursive, serif;
+  font-family: 'Alex Brush', cursive;
+}
+
+.font-giomori {
+  font-family: 'Giomori', serif;
 }
 
 .font-cinzel {
-  font-family: 'Cinzel', serif;
+  font-family: 'Giomori', serif;
+}
+
+.font-serif {
+  font-family: 'Giomori', serif;
 }
 
 /* Gold Gradient Text */
@@ -73,4 +97,25 @@
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #C5A059;
+}
+
+/* Infinite Horizontal Auto-Scroll Marquee */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 30s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
 }

@@ -52,12 +52,12 @@ export const ProtagonistsSection: React.FC = () => {
           {/* Arched Center Couple Photo (Center Column) */}
           <div className="lg:col-span-6 relative flex justify-center order-1 lg:order-2 my-4 lg:my-0">
             {/* Arched Photo Frame Container */}
-            <div className="relative w-full max-w-[340px] sm:max-w-[380px] aspect-[4/5] rounded-t-[180px] rounded-b-[24px] overflow-hidden p-2 bg-white border border-[#938D89]/30 shadow-card">
-              <div className="w-full h-full rounded-t-[172px] rounded-b-[20px] overflow-hidden">
+            <div className="relative w-full max-w-[360px] sm:max-w-[400px] aspect-[3/4] rounded-t-[180px] rounded-b-[24px] overflow-hidden p-2 bg-white border border-[#938D89]/30 shadow-card">
+              <div className="w-full h-full rounded-t-[172px] rounded-b-[20px] overflow-hidden bg-[#FAF8F5]">
                 <img
                   src={weddingData.protagonistsImage}
                   alt={`${weddingData.brideName} and ${weddingData.groomName}`}
-                  className="w-full h-full object-cover object-center filter hover:scale-105 transition-transform duration-700"
+                  className="w-full h-full object-cover object-top filter hover:scale-105 transition-transform duration-700"
                 />
               </div>
             </div>

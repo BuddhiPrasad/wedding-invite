@@ -23,29 +23,39 @@ export const GallerySection: React.FC = () => {
           </h2>
         </div>
 
-        {/* Gallery Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {weddingData.galleryImages.map((img, index) => (
-            <div
-              key={index}
-              onClick={() => setActiveImage(img.url)}
-              className="group relative aspect-[3/4] rounded-3xl overflow-hidden bg-white border border-[#938D89]/30 shadow-sm hover:shadow-card cursor-pointer transition-all duration-500 hover:-translate-y-1.5"
-            >
-              <img
-                src={img.url}
-                alt={img.caption}
-                className="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-700 filter contrast-[98%]"
-              />
+        {/* Auto Scrolling Horizontal Carousel Container */}
+        <div className="relative w-full overflow-hidden py-4">
+          
+          {/* Subtle Left & Right Fade Gradients */}
+          <div className="pointer-events-none absolute inset-y-0 left-0 w-16 sm:w-28 bg-gradient-to-r from-[#FFFFF0] via-[#FFFFF0]/80 to-transparent z-10" />
+          <div className="pointer-events-none absolute inset-y-0 right-0 w-16 sm:w-28 bg-gradient-to-l from-[#FFFFF0] via-[#FFFFF0]/80 to-transparent z-10" />
 
-              {/* Gradient Overlay & Hover Caption */}
-              <div className="absolute inset-0 bg-gradient-to-t from-[#292524]/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 text-white">
-                <div className="flex items-center justify-between">
-                  <p className="font-script text-2xl drop-shadow-md">{img.caption}</p>
-                  <ZoomIn className="w-5 h-5 text-[#FFFFF0]" />
+          {/* Marquee Track */}
+          <div className="animate-marquee flex items-center">
+            {/* Render duplicated sets for seamless continuous loop */}
+            {[...weddingData.galleryImages, ...weddingData.galleryImages].map((img, index) => (
+              <div
+                key={index}
+                onClick={() => setActiveImage(img.url)}
+                className="group relative w-[260px] sm:w-[300px] md:w-[340px] aspect-[3/4] shrink-0 mx-3 sm:mx-4 rounded-3xl overflow-hidden bg-white border border-[#938D89]/30 shadow-sm hover:shadow-card cursor-pointer transition-all duration-500 hover:-translate-y-1.5"
+              >
+                <img
+                  src={img.url}
+                  alt={img.caption}
+                  className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 filter contrast-[98%]"
+                />
+
+                {/* Gradient Overlay & Hover Caption */}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#292524]/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 text-white">
+                  <div className="flex items-center justify-between">
+                    <p className="font-script text-2xl sm:text-3xl drop-shadow-md">{img.caption}</p>
+                    <ZoomIn className="w-5 h-5 text-[#FFFFF0]" />
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
+
         </div>
 
       </div>

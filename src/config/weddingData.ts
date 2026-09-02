@@ -76,8 +76,8 @@ export const weddingData: WeddingData = {
     bridePhoneFormatted: "076 672 0606"
   },
   heroImage: "/images/hero_couple_new.png",
-  protagonistsImage: "/images/IMG_1860.JPG.jpeg",
-  sacredUnionImage: "/images/IMG_1863.JPG.jpeg",
+  protagonistsImage: "/images/2.jpg",
+  sacredUnionImage: "/images/3.png",
   timeline: [
     {
       time: "07:30 AM",
@@ -112,20 +112,24 @@ export const weddingData: WeddingData = {
   ],
   galleryImages: [
     {
-      url: "/images/IMG_1858.JPG.jpeg",
+      url: "/images/4.jpg",
       caption: "Eternal Moments"
     },
     {
-      url: "/images/IMG_1860.JPG.jpeg",
+      url: "/images/5.jpg",
       caption: "The Journey Begins"
     },
     {
-      url: "/images/IMG_1863.JPG.jpeg",
+      url: "/images/6.png",
       caption: "Love & Grace"
     },
     {
-      url: "/images/gallery_rings.png",
-      caption: "With This Ring"
+      url: "/images/7.png",
+      caption: "Together Forever"
+    },
+    {
+      url: "/images/8.png",
+      caption: "Our Promise"
     }
   ]
 };
