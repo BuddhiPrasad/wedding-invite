@@ -19,8 +19,10 @@ export const TimelineSection: React.FC = () => {
   };
 
   return (
-    <section className="py-24 px-4 bg-[#FFFFF0] relative overflow-hidden">
-      <div className="max-w-4xl mx-auto space-y-16">
+    <section id="timeline" className="py-24 px-4 bg-gradient-to-b from-[#FFFFF0] via-[#FAF6EE] to-[#FFFFF0] relative overflow-hidden">
+      {/* Soft Ambient Radial Light */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#C5A059]/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="max-w-4xl mx-auto space-y-16 relative z-10">
         
         {/* Header */}
         <div className="text-center space-y-3">

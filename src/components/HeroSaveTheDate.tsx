@@ -44,14 +44,14 @@ export const HeroSaveTheDate: React.FC = () => {
           <span className="font-cinzel text-[10px] sm:text-xs tracking-[0.25em] uppercase text-[#292524]">Save The Date</span>
         </div>
 
-        <h1 className="font-script text-[#292524] font-normal drop-shadow-sm flex flex-col items-center justify-center gap-1 sm:gap-2">
-          <span className="text-5xl sm:text-7xl lg:text-8xl leading-none">
+        <h1 className="font-script text-[#292524] font-normal drop-shadow-sm flex flex-col items-center justify-center gap-0.5 sm:gap-1">
+          <span className="text-5xl sm:text-7xl md:text-8xl lg:text-[110px] xl:text-[130px] leading-none tracking-normal">
             {weddingData.brideName}
           </span>
-          <span className="text-3xl sm:text-5xl lg:text-6xl text-[#C5A059] leading-tight font-script">
+          <span className="text-3xl sm:text-5xl lg:text-7xl xl:text-8xl text-[#C5A059] leading-tight font-script my-1">
             &
           </span>
-          <span className="text-5xl sm:text-7xl lg:text-8xl leading-none">
+          <span className="text-5xl sm:text-7xl md:text-8xl lg:text-[110px] xl:text-[130px] leading-none tracking-normal">
             {weddingData.groomName}
           </span>
         </h1>

@@ -39,8 +39,10 @@ export const CountdownSection: React.FC = () => {
   };
 
   return (
-    <section className="py-24 px-4 bg-white relative overflow-hidden">
-      <div className="max-w-4xl mx-auto space-y-12 text-center">
+    <section id="countdown" className="py-24 px-4 bg-gradient-to-b from-[#FFFFF0] via-white to-[#FFFFF0] relative overflow-hidden">
+      {/* Soft Ambient Radial Light */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] bg-[#C5A059]/4 rounded-full blur-3xl pointer-events-none" />
+      <div className="max-w-4xl mx-auto space-y-12 text-center relative z-10">
         
         {/* Header Label */}
         <div className="space-y-3">
@@ -57,7 +59,7 @@ export const CountdownSection: React.FC = () => {
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 max-w-2xl mx-auto">
           
           {/* Days Card */}
-          <div className="flex flex-col items-center justify-center py-6 px-4 rounded-t-[60px] rounded-b-[24px] bg-[#FFFFF0] border border-[#C5A059]/30 shadow-card hover:scale-105 transition-transform duration-300">
+          <div className="flex flex-col items-center justify-center py-7 px-4 rounded-t-[60px] rounded-b-[24px] bg-white border border-[#C5A059]/30 shadow-[0_10px_30px_rgba(41,37,36,0.04)] hover:shadow-[0_15px_35px_rgba(197,160,89,0.15)] hover:scale-105 transition-all duration-300">
             <span className="font-script text-5xl sm:text-6xl text-[#C5A059]">
               {formatNumber(timeLeft.days)}
             </span>
@@ -67,7 +69,7 @@ export const CountdownSection: React.FC = () => {
           </div>
 
           {/* Hours Card */}
-          <div className="flex flex-col items-center justify-center py-6 px-4 rounded-t-[60px] rounded-b-[24px] bg-[#FFFFF0] border border-[#C5A059]/30 shadow-card hover:scale-105 transition-transform duration-300">
+          <div className="flex flex-col items-center justify-center py-7 px-4 rounded-t-[60px] rounded-b-[24px] bg-white border border-[#C5A059]/30 shadow-[0_10px_30px_rgba(41,37,36,0.04)] hover:shadow-[0_15px_35px_rgba(197,160,89,0.15)] hover:scale-105 transition-all duration-300">
             <span className="font-script text-5xl sm:text-6xl text-[#C5A059]">
               {formatNumber(timeLeft.hours)}
             </span>
@@ -77,7 +79,7 @@ export const CountdownSection: React.FC = () => {
           </div>
 
           {/* Minutes Card */}
-          <div className="flex flex-col items-center justify-center py-6 px-4 rounded-t-[60px] rounded-b-[24px] bg-[#FFFFF0] border border-[#C5A059]/30 shadow-card hover:scale-105 transition-transform duration-300">
+          <div className="flex flex-col items-center justify-center py-7 px-4 rounded-t-[60px] rounded-b-[24px] bg-white border border-[#C5A059]/30 shadow-[0_10px_30px_rgba(41,37,36,0.04)] hover:shadow-[0_15px_35px_rgba(197,160,89,0.15)] hover:scale-105 transition-all duration-300">
             <span className="font-script text-5xl sm:text-6xl text-[#C5A059]">
               {formatNumber(timeLeft.minutes)}
             </span>
@@ -87,7 +89,7 @@ export const CountdownSection: React.FC = () => {
           </div>
 
           {/* Seconds Card */}
-          <div className="flex flex-col items-center justify-center py-6 px-4 rounded-t-[60px] rounded-b-[24px] bg-[#FFFFF0] border border-[#C5A059]/30 shadow-card hover:scale-105 transition-transform duration-300">
+          <div className="flex flex-col items-center justify-center py-7 px-4 rounded-t-[60px] rounded-b-[24px] bg-white border border-[#C5A059]/30 shadow-[0_10px_30px_rgba(41,37,36,0.04)] hover:shadow-[0_15px_35px_rgba(197,160,89,0.15)] hover:scale-105 transition-all duration-300">
             <span className="font-script text-5xl sm:text-6xl text-[#C5A059]">
               {formatNumber(timeLeft.seconds)}
             </span>
@@ -102,3 +104,4 @@ export const CountdownSection: React.FC = () => {
     </section>
   );
 };
+

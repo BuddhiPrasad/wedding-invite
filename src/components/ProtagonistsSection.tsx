@@ -4,8 +4,11 @@ import { Sparkles, Heart } from 'lucide-react';
 
 export const ProtagonistsSection: React.FC = () => {
   return (
-    <section id="protagonists" className="py-24 px-4 bg-[#FFFFF0] relative overflow-hidden">
+    <section id="protagonists" className="py-24 px-4 bg-gradient-to-b from-[#FFFFF0] via-[#FAF6EE] to-[#FFFFF0] relative overflow-hidden">
       
+      {/* Soft Ambient Radial Glow */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#C5A059]/5 rounded-full blur-3xl pointer-events-none" />
+
       {/* Decorative Subtle Background Sparkles */}
       <div className="absolute top-12 left-10 text-[#C5A059]/20 pointer-events-none">
         <Sparkles className="w-12 h-12" />
@@ -14,7 +17,7 @@ export const ProtagonistsSection: React.FC = () => {
         <Sparkles className="w-16 h-16" />
       </div>
 
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-6xl mx-auto relative z-10">
         
         {/* Section Header */}
         <div className="text-center space-y-3 mb-16">
@@ -93,3 +96,4 @@ export const ProtagonistsSection: React.FC = () => {
     </section>
   );
 };
+

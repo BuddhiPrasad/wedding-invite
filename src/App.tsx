@@ -10,6 +10,7 @@ import { GallerySection } from './components/GallerySection';
 import { CountdownSection } from './components/CountdownSection';
 // import { RSVPSection } from './components/RSVPSection';
 import { GuestbookSection } from './components/GuestbookSection';
+import { SectionDivider } from './components/SectionDivider';
 import { AmbientPetals } from './components/AmbientPetals';
 import { Footer } from './components/Footer';
 
@@ -36,12 +37,31 @@ export const App: React.FC = () => {
         {/* Sections */}
         <main>
           <HeroSaveTheDate />
+          
           <ProtagonistsSection />
+          
+          <SectionDivider variant="rings" />
+          
           <SacredUnionSection />
+          
+          <SectionDivider variant="star" />
+          
           <VenuesSection />
+          
+          <SectionDivider variant="flourish" />
+          
           <TimelineSection />
+          
+          <SectionDivider variant="star" />
+          
           <GallerySection />
+          
+          <SectionDivider variant="rings" />
+          
           <CountdownSection />
+          
+          <SectionDivider variant="flourish" />
+          
           {/* <RSVPSection /> */}
           <GuestbookSection />
         </main>
@@ -56,3 +76,4 @@ export const App: React.FC = () => {
 };
 
 export default App;
+

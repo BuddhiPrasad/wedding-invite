@@ -6,8 +6,10 @@ export const GallerySection: React.FC = () => {
   const [activeImage, setActiveImage] = useState<string | null>(null);
 
   return (
-    <section className="py-24 px-4 bg-[#FFFFF0] relative overflow-hidden">
-      <div className="max-w-6xl mx-auto space-y-16">
+    <section id="gallery" className="py-24 px-4 bg-gradient-to-b from-[#FFFFF0] via-white to-[#FFFFF0] relative overflow-hidden">
+      {/* Soft Ambient Radial Light */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-[#C5A059]/4 rounded-full blur-3xl pointer-events-none" />
+      <div className="max-w-6xl mx-auto space-y-16 relative z-10">
         
         {/* Header */}
         <div className="text-center space-y-3">
@@ -26,9 +28,9 @@ export const GallerySection: React.FC = () => {
         {/* Auto Scrolling Horizontal Carousel Container */}
         <div className="relative w-full overflow-hidden py-4">
           
-          {/* Subtle Left & Right Fade Gradients */}
-          <div className="pointer-events-none absolute inset-y-0 left-0 w-16 sm:w-28 bg-gradient-to-r from-[#FFFFF0] via-[#FFFFF0]/80 to-transparent z-10" />
-          <div className="pointer-events-none absolute inset-y-0 right-0 w-16 sm:w-28 bg-gradient-to-l from-[#FFFFF0] via-[#FFFFF0]/80 to-transparent z-10" />
+          {/* Seamless White Fade Gradients for Marquee */}
+          <div className="pointer-events-none absolute inset-y-0 left-0 w-16 sm:w-28 bg-gradient-to-r from-white via-white/80 to-transparent z-10" />
+          <div className="pointer-events-none absolute inset-y-0 right-0 w-16 sm:w-28 bg-gradient-to-l from-white via-white/80 to-transparent z-10" />
 
           {/* Marquee Track */}
           <div className="animate-marquee flex items-center">
